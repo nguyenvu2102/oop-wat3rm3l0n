@@ -5,6 +5,7 @@ import com.example.oopbee.entity.Drone;
 import com.example.oopbee.entity.QueenBee;
 import com.example.oopbee.entity.WorkerBee;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,6 +14,7 @@ import java.util.Random;
  */
 public class BeeHive {
     private ArrayList<Bee> listBee;
+    private Random rand = SecureRandom.getInstanceStrong();
 
     public void init() {
         //create list of 10 bees  of Queen, Drone and Worker types
@@ -24,8 +26,6 @@ public class BeeHive {
         this.listBee.add(new Drone());
 
 
-        // Random from 1 -> 3
-        Random rand = new Random();
 
         for (int i = 0 ; i < 7 ; i++) {
             int r = rand.nextInt(3) + 1;

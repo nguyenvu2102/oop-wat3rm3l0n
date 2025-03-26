@@ -1,5 +1,6 @@
 package com.example.oopbee.entity;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public abstract class Bee {
@@ -58,7 +59,7 @@ public abstract class Bee {
         }
     }
 
-    //attack this bee
+    private Random rand = SecureRandom.getInstanceStrong();
     public void damage() {
 
         // only damage alive bee
