@@ -64,9 +64,6 @@ public abstract class Bee {
 
         // only damage alive bee
         if (this.isAlive()) {
-
-            // Random 1 -> 100
-            Random rand = new Random();
             int damageAmount = rand.nextInt(100) + 1;
 
             int delta = this.getHealth() - damageAmount;
